@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!-- sound of the underground -->
+<html lang="en">
+<head>
+  <link rel="icon" href="side.gif" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lookbook</title>
+</head>
+<style>
+@font-face {
+    font-family: 'F25 Bank Printer';
+    src: url('fonts/F25_Bank_Printer.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'F25 Bank Printer';
+    src: url('fonts/F25_Bank_Printer_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+body {
+  margin: 0;
+  font-family: 'F25 Bank Printer', sans-serif;
+  background: linear-gradient(to bottom, #f1f1f1, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img {
+  user-select: none;       /* Verhindert Markieren des Bildes */
+  -webkit-user-drag: none; /* Verhindert Drag & Drop in WebKit-Browsern */
+  pointer-events: none;    /* Macht Bilder komplett „nicht klickbar“ */
+}
+
+/* Navbar styles */
+  /* Navbar */
+  .navbar {
+    height: 100px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+  }
+
+  
+  
+  .logo-link {
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
+  }
+  
+  .logo-link img {
+    height: 200px; /* matches navbar height */
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+/* Post styles */
+.post {
+  background-color: white;
+  max-width: 600px;
+  width: 100%;
+  margin: 10px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  aspect-ratio: 4 / 3; /* Or 1 / 1 if square, or remove for natural ratio */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.caption b {
+  margin: 5px 0 2px 10px; /* bottom margin 2px */
+  padding: 0;
+  display: block;
+  font-family: 'F25 Bank Printer', sans-serif;
+  font-weight: 700;
+}
+
+.caption p {
+  margin: 0 20px 4px 10px; /* current margins */
+  padding: 0;
+  font-family: 'F25 Bank Printer', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  border-top: none;
+}
+
+/* Adjust to bring them closer */
+.caption b {
+  margin-bottom: 1px; /* reduce bottom margin */
+}
+
+.caption p {
+  margin-top: 1px; /* add a small top margin */
+}
+
+.post-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; /* spacing between text and image */
+  padding: 0px 0px;
+}
+
+.caption {
+  flex: 1; /* text uses remaining space */
+}
+
+.side img {
+  width: 40px;   /* smaller size */
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0; /* don’t shrink */
+}
+
+.side {
+  margin-right: 30px; /* move it right a bit */
+  margin-top: 7px;   /* move it down a bit */
+  flex-shrink: 0;
+}
+
+
+.timestamp {
+  margin: 10px 0 7px 10px;
+  padding: 0;
+  font-size: 12px;
+  color: #777;
+}
+
+
+  /* Footer */
+  footer.footer {
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'F25 Bank Printer', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #444;
+    margin-top: 20px;
+    flex-shrink: 0;
+    width: 100%;
+  }
+  
+  .footer-links {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #444;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #000;
+  }
+  
+  .footer-copy {
+    font-weight: 400;
+    font-size: 13px;
+    color: #777;
+  }
+  
+</style>
+<body>
+
+  <!-- Navbar with GIF logo -->
+	<header class="navbar" id="navbar">
+	  <a href="index.html" class="logo-link">
+		<img src="navbarimg.png" alt="Logo" />
+	  </a>
+	</header>
+	
+  <!-- Blog Posts -->
+  <div class="post">
+	  <div class="image-container">
+		<img src="posts/image3.jpg" alt="lake" />
+	  </div>
+	  <div class="post-content">
+		<div class="caption">
+		  <b>KAPPE</b>
+		  <p>Kappe_1/1_von_Tony_Giullare</p>
+		  <div class="timestamp">29-1-2026</div>
+		</div>
+		<div class="side">
+		  <img src="side.png" alt="Side Image" />
+		</div>
+	  </div>
+	</div>
+
+
+	<div class="post">
+	  <div class="image-container">
+		<img src="posts/image1.jpeg" alt="water skatepark" />
+	  </div>
+	  <div class="post-content">
+		<div class="caption">
+		  <b>NECKTAGS</b>
+		  <p>Alle_Necktags_werden_handgemacht</p>
+		  <div class="timestamp">29-1-2026</div>
+		</div>
+		<div class="side">
+		  <img src="side.png" alt="Side Image" />
+		</div>
+	  </div>
+	</div>
+
+
+	<div class="post">
+	  <div class="image-container">
+		<img src="posts/image2.jpeg" alt="lake" />
+	  </div>
+	  <div class="post-content">
+		<div class="caption">
+		  <b>TESTPRINT</b>
+		  <p>Fehldruecke_der_ersten_T-Shirts</p>
+		  <div class="timestamp">9-1-2026</div>
+		</div>
+		<div class="side">
+		  <img src="side.png" alt="Side Image" />
+		</div>
+	  </div>
+	</div>
+	
+	
+
+  <!-- Scroll behavior script -->
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        navbar.classList.add("shrink");
+		navbar.classList.remove("grow");
+      } else {
+        // Scrolling up
+        navbar.classList.remove("shrink");
+		navbar.classList.add("grow");
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  </script>
+  
+  <footer class="footer">
+	  <div class="footer-links">
+		<a href="https://www.instagram.com/zentrum_mafia/" target="_blank" rel="noopener noreferrer">Instagram</a>
+		<a href="https://www.youtube.com/channel/UCuCPQRbkkRWhS4Hbh84M4jQ" target="_blank" rel="noopener noreferrer">Youtube</a>
+		<a href="about.html" target="_blank" rel="noopener noreferrer">About</a>
+	  </div>
+	  <div class="footer-copy">
+        Copyright © 2026 ZENTRUM MAFIA
+	  </div>
+  </footer>
+
+
+</body>
+</html>
